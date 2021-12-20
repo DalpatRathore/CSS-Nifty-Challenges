@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&family=Tangerine&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ----------------- Default value reset --------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----------------- Variables - challenge container width & height --------------- */
+
+$containerWt: 400px;
+$containerHt: 300px;
+
+/* ----------------- Variable - footer --------------- */
+
+$footerHeight: 50px;
+
+/* ----------------- Mixins --------------- */
+
+@mixin flexCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexContainer(
+  $flex,
+  $flexDirection,
+  $alignItems,
+  $justifyContent,
+  $wrap,
+  $marginTop,
+  $gap
+) {
+  display: $flex;
+  flex-direction: $flexDirection;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+  flex-wrap: $wrap;
+  margin: $marginTop;
+  gap: $gap;
+}
+
+@mixin challengeContainer($width, $height, $background, $borderRadius) {
+  width: $width;
+  height: $height;
+  background: $background;
+  border-radius: $borderRadius;
+}
+
+body {
+  width: 100%;
+}
+
+/* ----------------- Header Styles --------------- */
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: rgba(221, 221, 221, 0.8);
+  backdrop-filter: blur(2px);
+  border-bottom: 2px solid #ccc;
+  box-shadow: 0 2px 5px #aaa;
+  z-index: 999;
+}
+
+/* ----------------- Logo Styles--------------- */
+
+.logo {
+  width: 100%;
+  height: 65px;
+  @include flexCenter();
+  & h1 {
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: bolder;
+    color: #fff;
+    letter-spacing: 1px;
+    text-shadow: 1px 2px 2px #333;
+    font-family: "Tangerine", "Lobster Two", sans-serif;
+  }
+}
+
+/* ----------------- Navbar Styles --------------- */
+
+.navbar {
+  width: 100%;
+  padding: 5px 10px;
+  & ul {
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    & li {
+      padding: 8px 20px;
+      margin: 10px 16px;
+      background: orange;
+      border-radius: 5px;
+      box-shadow: 0 0 2px #222;
+      transition: 0.3s ease-in;
+      cursor: pointer;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+  & a {
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    color: rgb(13, 40, 80);
+
+    font-family: "Lucida Sans Regular", sans-serif;
+  }
+}
+
+/* ----------------- Generic Styles --------------- */
+section {
+  padding: 10px 20px;
+  font-family: Cambria, serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  font-family: "Trebuchet MS", sans-serif;
+  color: #0b2244;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px rgba(51, 51, 51, 0.85);
+  text-shadow: 1px 1px 2px rgb(75, 74, 74);
+  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
+    0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10px;
+}
+p {
+  margin: 10px 0;
+  max-width: 1024px;
+  letter-spacing: 0.5px;
+  & span {
+    background: #ca6702;
+    padding: 2px 3px;
+    font-weight: bold;
+    border-radius: 2px;
+  }
+}
+a {
+  color: rgb(6, 59, 206);
+}
+
+.ChallengesWrapper {
+  // pass -  $flex, $flexDirection, $alignItems,  $justifyContent,  $wrap,  $marginTop,  $gap - in order
+  @include flexContainer(flex, row, center, space-evenly, wrap, 15px, 25px);
+  // height: 90vh;
+}
+.challengeWrapper {
+  // pass -  $flex, $flexDirection, $alignItems,  $justifyContent,  $wrap,  $marginTop,  $gap - in order
+  @include flexContainer(flex, column, flex-start, center, wrap, 0px, 0px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 1);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* ----------------- Hamburger Menu Button Styles --------------- */
+
+#menu-btn {
+  min-height: calc(100vh - 125px);
+  background: #edf6f9;
+}
+
+.menu-container-1 {
+  @include flexCenter();
+  // pass - $width, $height, $background, $borderRadius - in order
+  @include challengeContainer($containerWt, $containerHt, #3faf82, 5px);
+
+  position: relative;
+}
+.menu-icon-1 {
+  @include flexCenter();
+  flex-direction: column;
+  width: 90px;
+  height: 60px;
+  position: relative;
+  border-radius: 5px;
+  & span {
+    width: 90px;
+    height: 8px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 1px 2px 3px #555;
+    position: absolute;
+    &:nth-child(1) {
+      animation: animateClose1 0.8s forwards;
+    }
+    &:nth-child(2) {
+      transition: 1s;
+    }
+    &:nth-child(3) {
+      animation: animateClose2 0.8s forwards;
+    }
+  }
+  &.active-1 span:nth-child(1) {
+    animation: animateOpen1 0.8s forwards;
+  }
+  &.active-1 span:nth-child(2) {
+    width: 0;
+    transition: 0.5s;
+  }
+  &.active-1 span:nth-child(3) {
+    animation: animateOpen2 0.8s forwards;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@keyframes animateOpen1 {
+  0% {
+    transform: translateY(22px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px) rotate(45deg);
+  }
+}
+
+@keyframes animateOpen2 {
+  0% {
+    transform: translateY(-22px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px) rotate(135deg);
+  }
+}
+
+@keyframes animateClose1 {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-22px);
+  }
+}
+
+@keyframes animateClose2 {
+  0% {
+    transform: rotate(135deg);
+  }
+  50% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(22px);
+  }
+}
+
+.menu-container-2 {
+  @include flexCenter();
+  // pass - $width, $height, $background, $borderRadius - in order
+  @include challengeContainer($containerWt, $containerHt, #ddd, 5px);
+
+  position: relative;
+  box-shadow: 0 0 10px rgba(114, 113, 113, 0.5);
+}
+.menu-icon-2 {
+  @include flexCenter();
+  flex-direction: column;
+  width: 110px;
+  height: 100px;
+  position: relative;
+  background: #fff;
+
+  border-radius: 20px;
+  box-shadow: 0 0 8px 2px rgba(172, 169, 169, 0.3);
+  overflow: hidden;
+  & span {
+    height: 8px;
+    border-radius: 10px;
+    background: #069;
+    box-shadow: 1px 2px 3px rgba(85, 85, 85, 0.8);
+    position: absolute;
+    transition: 0.5s;
+    &:nth-child(1) {
+      left: 15px;
+      width: 50px;
+      transform: translateY(-22px);
+    }
+    &:nth-child(2) {
+      transition: 1s;
+      left: 15px;
+      width: 80px;
+    }
+    &:nth-child(3) {
+      left: 15px;
+      width: 30px;
+      transform: translateY(22px);
+    }
+  }
+  &.active-2 span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+    width: 80px;
+  }
+  &.active-2 span:nth-child(2) {
+    transform: translateX(120px);
+  }
+  &.active-2 span:nth-child(3) {
+    transform: translateY(0) rotate(315deg);
+    width: 80px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+/* ----------------- Loader Styles--------------- */
+
+.loader-container {
+  // pass - $width, $height, $background, $borderRadius - in order
+  @include challengeContainer($containerWt, $containerHt, #e56262, 5px);
+}
+.loader-1 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  @include flexCenter();
+  & span {
+    position: absolute;
+    display: block;
+    background: #fff;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: all 0.3s;
+    &:nth-child(1) {
+      width: 100px;
+      height: 100px;
+      animation: scaleAnimation-1 3s ease-in-out infinite alternate;
+    }
+    &:nth-child(2) {
+      width: 70px;
+      height: 70px;
+      animation: scaleAnimation-2 3s ease-in-out infinite alternate;
+    }
+    &:nth-child(3) {
+      width: 30px;
+      height: 30px;
+      animation: scaleAnimation-3 3s ease-in-out infinite alternate;
+    }
+  }
+}
+@keyframes scaleAnimation-1 {
+  0%,
+  10% {
+    transform: scale(0);
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.35);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 10px 10px 12px 0 rgba(0, 0, 0, 0.45);
+  }
+}
+@keyframes scaleAnimation-2 {
+  0%,
+  40% {
+    transform: scale(0);
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.25);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 10px 10px 11px 0 rgba(0, 0, 0, 0.35);
+  }
+}
+@keyframes scaleAnimation-3 {
+  0%,
+  70% {
+    transform: scale(0);
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.25);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 10px 10px 11px 0 rgba(0, 0, 0, 0.35);
+  }
+}
+
+/* ----------------- Footer Styles--------------- */
+
+footer {
+  @include flexCenter();
+  width: 100%;
+  height: $footerHeight;
+  background: #000;
+  color: #fff;
+  font-family: cursive;
+}
