@@ -9,9 +9,32 @@
 
 #### `Description:` Hamburger Menu Button - almost used on every website by now to view navbar menu on small screen devices. It should be simple yet impressively animated to give great UI/UX.
 
-#### `Source of Challenge 1:` [https://100dayscss.com/days/2](https://100dayscss.com/days/2/)
-
-#### `Source of Challenge 2:` [Online Tutorials](https://www.youtube.com/watch?v=TD-MFXs2M5E)
+<table>
+  <tr>
+    <th>
+      Challenge-1
+    </th>
+    <th>
+      Challenge-2
+    </th>
+  </tr>
+  <tr>
+    <td>
+      Source - <a href="https://100dayscss.com/days/4/">https://100dayscss.com/days/4</a>
+    </td>
+    <td>
+       Source - <a href="https://www.youtube.com/watch?v=TD-MFXs2M5E">Online Tutorials</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    <img width="250" src="images/menu-soc-1.jpg" alt=" menu button" />      
+    </td>
+    <td>
+    <img width="250" src="images/menu-soc-2.jpg" alt=" menu button" />
+    </td>
+  </tr>
+</table>
 
 <hr/>
 
@@ -19,7 +42,24 @@
 
 #### `Description:` Loader - The best way to engage a user when an application is loading. Nowadays almost every web or mobile application uses different styles of loaders.
 
-#### `Source of Challenge 1:` [https://100dayscss.com/days/4](https://100dayscss.com/days/4/)
+#### `Source of Challenge 1:` [](https://100dayscss.com/days/4/)
+
+<table>
+  <tr>
+    <th>
+      Challenge-1
+    </th>
+  </tr>
+  <tr>
+    <td>
+      Source - <a href="https://100dayscss.com/days/2/">https://100dayscss.com/days/2</a>
+    </td>
+   </tr>
+  <tr>
+    <td>
+    <img width="250" src="images/loader-soc-1.jpg" alt=" loader"/>     </td>
+  </tr>
+</table>
 
 <hr/>
 
@@ -27,7 +67,20 @@
 
 
 #### `Description:` Chart - Statistics numbers properly crafted in a chart with different colors not only easily comprehended by anyone but also present an aesthetic view to data science. 
-
-#### `Source of Challenge 1:` [https://100dayscss.com/days/5](https://100dayscss.com/days/5/)
-
+<table>
+  <tr>
+    <th>
+      Challenge-1
+    </th> 
+  </tr>
+  <tr>
+    <td>
+      Source - <a href="https://100dayscss.com/days/5/">https://100dayscss.com/days/5</a>
+    </td>
+   </tr>
+  <tr>
+    <td>
+    <img width="250" src="images/chart-soc-1.jpg" alt="chart"/>     </td>
+  </tr>
+</table>
 <hr/>
