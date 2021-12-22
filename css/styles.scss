@@ -11,12 +11,13 @@ html {
   box-sizing: border-box;
 }
 
-/* ----------------- Variables - challenge container width & height --------------- */
+/* ----------------- Variables  --------------- */
 
 $containerWt: 400px;
 $containerHt: 300px;
 
-/* ----------------- Variable - footer --------------- */
+$chart-red: #fa7373;
+$chart-blue: #7ba2ff;
 
 $footerHeight: 50px;
 
@@ -142,13 +143,17 @@ h1 {
     0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
     0 20px 20px rgba(0, 0, 0, 0.15);
   margin-bottom: 10px;
+  & img {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
+    border-radius: 50%;
+  }
 }
-p {
+.text {
   margin: 10px 0;
   max-width: 1024px;
   letter-spacing: 0.5px;
   & span {
-    background: #ca6702;
+    background: #ee7c0a;
     padding: 2px 3px;
     font-weight: bold;
     border-radius: 2px;
@@ -333,7 +338,7 @@ a {
 
 /* ----------------- Loader Styles--------------- */
 
-.loader-container {
+.loader-container-1 {
   // pass - $width, $height, $background, $borderRadius - in order
   @include challengeContainer($containerWt, $containerHt, #e56262, 5px);
 }
@@ -401,6 +406,291 @@ a {
     transform: scale(1);
     box-shadow: 10px 10px 11px 0 rgba(0, 0, 0, 0.35);
   }
+}
+
+/* ----------------- Chart Styles--------------- */
+
+.chart-container-1 {
+  // pass - $width, $height, $background, $borderRadius - in order
+  @include challengeContainer($containerWt, $containerHt, #42a7a1, 5px);
+  @include flexCenter();
+}
+
+.chart-1 {
+  width: 300px;
+  height: 240px;
+  background: #fefefe;
+  border-radius: 5px;
+  box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.info-strip {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f1ba64;
+  color: #fff;
+  padding: 0 15px;
+}
+
+.info-left {
+  letter-spacing: 1px;
+  & p:nth-child(1) {
+    text-transform: uppercase;
+  }
+  & p:nth-child(2) {
+    font-size: 12px;
+  }
+}
+.info-right {
+  letter-spacing: 1px;
+  & p:nth-child(1) {
+    text-align: right;
+    font-size: 12px;
+  }
+}
+
+.labels {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .label {
+    display: flex;
+    align-items: center;
+    & p {
+      font-size: 12px;
+      font-weight: 200;
+      margin-right: 10px;
+      color: #888;
+    }
+    & span {
+      display: inline-block;
+      border-radius: 0;
+      width: 12px;
+      height: 3px;
+    }
+    &:nth-child(1) {
+      & span {
+        background: $chart-red;
+        margin-right: 8px;
+      }
+    }
+    &:nth-child(2) {
+      & span {
+        background: $chart-blue;
+        margin: 0 8px 0 10px;
+      }
+    }
+  }
+}
+.lines {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  position: relative;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background: #ddd;
+}
+.data {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  & svg {
+    position: absolute;
+    top: -2%;
+    left: 5%;
+    right: 0;
+    bottom: 0;
+  }
+
+  polyline {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+
+  &.red polyline {
+    stroke: $chart-red;
+  }
+
+  &.blue polyline {
+    stroke: $chart-blue;
+  }
+}
+
+.points-red {
+  .point {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $chart-red;
+    cursor: pointer;
+    z-index: 10;
+    &:nth-child(1) {
+      top: 51%;
+      left: 7%;
+    }
+    &:nth-child(2) {
+      top: 9.5%;
+      left: 20.5%;
+    }
+    &:nth-child(3) {
+      top: 22%;
+      left: 34%;
+    }
+    &:nth-child(4) {
+      top: 9%;
+      left: 47.5%;
+    }
+    &:nth-child(5) {
+      top: 40%;
+      left: 60%;
+    }
+    &:nth-child(6) {
+      top: 52%;
+      left: 74%;
+    }
+    &:nth-child(7) {
+      top: 18%;
+      left: 88%;
+    }
+    & small {
+      visibility: hidden;
+      color: #fff;
+      position: relative;
+      z-index: 11;
+      @include flexCenter();
+      transition: all 0.5s;
+      transform: translateY(-100%);
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border-radius: 2px;
+        box-shadow: 2px 3px 7px rgba(20, 20, 20, 0.5);
+        background: $chart-red;
+        z-index: -1;
+        padding: 2px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 110%;
+        width: 8px;
+        height: 8px;
+        transform: rotate(45deg);
+        background: $chart-red;
+        z-index: -1;
+      }
+    }
+
+    &:hover small {
+      visibility: visible;
+      transform: translateY(-200%);
+    }
+  }
+}
+.points-blue {
+  .point {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $chart-blue;
+    cursor: pointer;
+    &:nth-child(1) {
+      top: 70%;
+      left: 7%;
+    }
+    &:nth-child(2) {
+      top: 58%;
+      left: 20.5%;
+    }
+    &:nth-child(3) {
+      top: 75%;
+      left: 34%;
+    }
+    &:nth-child(4) {
+      top: 62%;
+      left: 47.5%;
+    }
+    &:nth-child(5) {
+      top: 69%;
+      left: 60%;
+    }
+    &:nth-child(6) {
+      top: 85%;
+      left: 75%;
+    }
+    &:nth-child(7) {
+      top: 74%;
+      left: 88%;
+    }
+    & small {
+      visibility: hidden;
+      color: #fff;
+      position: relative;
+      z-index: 11;
+      @include flexCenter();
+      transition: all 0.5s;
+      transform: translateY(-100%);
+      &::before {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border-radius: 2px;
+        box-shadow: 2px 3px 7px rgba(20, 20, 20, 0.5);
+        background: $chart-blue;
+        z-index: -1;
+        padding: 2px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 110%;
+        width: 8px;
+        height: 8px;
+        transform: rotate(45deg);
+        background: $chart-blue;
+        z-index: -1;
+      }
+    }
+
+    &:hover small {
+      visibility: visible;
+      transform: translateY(-200%);
+    }
+  }
+}
+
+.weekdays {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-transform: uppercase;
+  color: #aaa;
+  font-size: 12px;
 }
 
 /* ----------------- Footer Styles--------------- */
