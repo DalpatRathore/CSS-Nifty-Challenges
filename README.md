@@ -10,7 +10,7 @@
 #### `Description:` Hamburger Menu Button - almost used on every website by now to view navbar menu on small screen devices. It should be simple yet impressively animated to give great UI/UX.
 
 <table>
-  <tr>
+  <tr align="center">
     <th>
       Challenge-1
     </th>
@@ -18,7 +18,7 @@
       Challenge-2
     </th>
   </tr>
-  <tr>
+  <tr align="center">
     <td>
       Source - <a href="https://100dayscss.com/days/4/">https://100dayscss.com/days/4</a>
     </td>
@@ -26,7 +26,7 @@
        Source - <a href="https://www.youtube.com/watch?v=TD-MFXs2M5E">Online Tutorials</a>
     </td>
   </tr>
-  <tr>
+  <tr align="center">
     <td>
     <img width="250" src="images/menu-soc-1.jpg" alt=" menu button" />      
     </td>
@@ -41,21 +41,18 @@
 <h2><img align="center" width="21.5" src="images/bullet.png" /> Loader </h2>
 
 #### `Description:` Loader - The best way to engage a user when an application is loading. Nowadays almost every web or mobile application uses different styles of loaders.
-
-#### `Source of Challenge 1:` [](https://100dayscss.com/days/4/)
-
 <table>
-  <tr>
+  <tr align="center">
     <th>
       Challenge-1
     </th>
   </tr>
-  <tr>
+  <tr align="center">
     <td>
-      Source - <a href="https://100dayscss.com/days/2/">https://100dayscss.com/days/2</a>
+      Source - <a fontSize="10" href="https://100dayscss.com/days/2/">https://100dayscss.com/days/2</a>
     </td>
    </tr>
-  <tr>
+  <tr align="center">
     <td>
     <img width="250" src="images/loader-soc-1.jpg" alt=" loader"/>     </td>
   </tr>
@@ -68,17 +65,17 @@
 
 #### `Description:` Chart - Statistics numbers properly crafted in a chart with different colors not only easily comprehended by anyone but also present an aesthetic view to data science. 
 <table>
-  <tr>
+  <tr align="center">
     <th>
       Challenge-1
     </th> 
   </tr>
-  <tr>
+  <tr align="center">
     <td>
       Source - <a href="https://100dayscss.com/days/5/">https://100dayscss.com/days/5</a>
     </td>
    </tr>
-  <tr>
+  <tr align="center">
     <td>
     <img width="250" src="images/chart-soc-1.jpg" alt="chart"/>     </td>
   </tr>
