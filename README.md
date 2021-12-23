@@ -46,15 +46,23 @@
     <th>
       Challenge-1
     </th>
+    <th>
+      Challenge-2
+    </th>
   </tr>
   <tr align="center">
     <td>
-      Source - <a fontSize="10" href="https://100dayscss.com/days/2/">https://100dayscss.com/days/2</a>
+      Source - <a href="https://100dayscss.com/days/2/">https://100dayscss.com/days/2</a>
+    </td>
+    <td>
+      Source - <a href="https://youtu.be/v3VDVbVdP0w?list=PL5e68lK9hEzeeXtsQCQYd9SAzj6u6wZpi/">Online Tutorials</a>
     </td>
    </tr>
   <tr align="center">
     <td>
     <img width="250" src="images/loader-soc-1.jpg" alt=" loader"/>     </td>
+    <td>
+    <img width="250" src="images/loader-soc-2.jpg" alt=" loader"/>     </td>
   </tr>
 </table>
 

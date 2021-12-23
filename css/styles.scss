@@ -408,6 +408,56 @@ a {
   }
 }
 
+.loader-container-2 {
+  // pass - $width, $height, $background, $borderRadius - in order
+  @include challengeContainer($containerWt, $containerHt, #000000, 5px);
+  @include flexCenter();
+  & svg {
+    width: 0;
+    height: 0;
+  }
+}
+.loader-2 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+
+  filter: url(#gooey);
+  & span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: blob 4s linear infinite;
+    animation-delay: calc(0.2s * var(--i));
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 35%;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px #069;
+      background: linear-gradient(0deg, #069, #abcdef);
+    }
+  }
+}
+
+@keyframes blob {
+  0% {
+    transform: rotate(0deg);
+  }
+  50%,
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* ----------------- Chart Styles--------------- */
 
 .chart-container-1 {
