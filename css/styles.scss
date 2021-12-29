@@ -170,7 +170,7 @@ a {
 }
 .challengeWrapper {
   // pass -  $flex, $flexDirection, $alignItems,  $justifyContent,  $wrap,  $marginTop,  $gap - in order
-  @include flexContainer(flex, column, flex-start, center, wrap, 0px, 0px);
+  @include flexContainer(flex, column, flex-start, center, wrap, 0, 0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 1);
   padding: 15px;
   border-radius: 5px;
@@ -234,10 +234,10 @@ a {
     transform: translateY(22px);
   }
   50% {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
   100% {
-    transform: translateY(0px) rotate(45deg);
+    transform: translateY(0) rotate(45deg);
   }
 }
 
@@ -246,10 +246,10 @@ a {
     transform: translateY(-22px);
   }
   50% {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
   100% {
-    transform: translateY(0px) rotate(135deg);
+    transform: translateY(0) rotate(135deg);
   }
 }
 
@@ -258,7 +258,7 @@ a {
     transform: rotate(45deg);
   }
   50% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
   }
   100% {
     transform: translateY(-22px);
@@ -270,7 +270,7 @@ a {
     transform: rotate(135deg);
   }
   50% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
   }
   100% {
     transform: translateY(22px);
