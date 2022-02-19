@@ -62,14 +62,10 @@ body {
 /* ----------------- Header Styles --------------- */
 
 header {
-  position: sticky;
-  top: 0;
-  left: 0;
   background: rgba(221, 221, 221, 0.8);
-  backdrop-filter: blur(2px);
-  border-bottom: 2px solid #ccc;
-  box-shadow: 0 2px 5px #aaa;
-  z-index: 999;
+  // backdrop-filter: blur(2px);
+  // border-bottom: 2px solid #ccc;
+  // box-shadow: 0 2px 5px #aaa;
 }
 
 /* ----------------- Logo Styles--------------- */
@@ -77,10 +73,10 @@ header {
 .logo {
   width: 100%;
   @include flexCenter();
-  padding: 10px 0;
+  padding: 5px 0;
   & h1 {
     font-size: 2.2rem;
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-size: clamp(1.5rem, 5vw, 3.5rem);
     font-style: italic;
     font-weight: normal;
     color: #1572b6;
@@ -94,7 +90,8 @@ header {
       0 20px 20px rgba(0, 0, 0, 0.15);
   }
   & img {
-    width: 100px;
+    margin-left: 10px;
+    width: clamp(50px, 10vw, 100px);
     object-fit: contain;
   }
 }
@@ -102,8 +99,16 @@ header {
 /* ----------------- Navbar Styles --------------- */
 
 .navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
   width: 100%;
   padding: 5px 10px;
+  background: rgba(221, 221, 221, 0.8);
+  backdrop-filter: blur(2px);
+  border-bottom: 2px solid #ccc;
+  box-shadow: 0 2px 5px #aaa;
   & ul {
     width: 100%;
     list-style: none;
@@ -111,7 +116,6 @@ header {
     align-items: flex-start;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin: 15px auto;
     & li a {
       display: inline-block;
       border-radius: 5px;
