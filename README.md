@@ -1,13 +1,13 @@
 <h1><img align="center" width="50" src="images/css3.png" /> CSS Nifty Challenges </h1>
 
-#### Nifty challenges are for practicing and testing CSS learning. It also helps in sharping and adding more values to the frontend styling skillset.
+Nifty challenges are for practicing and testing CSS learning. It also helps in sharping and adding more values to the frontend styling skillset.
 
 ### **Live Demo**: [https://cssnifty.netlify.app](https://cssnifty.netlify.app/)
 <hr>
 
 <h2><img align="center" width="21.5" src="images/bullet.png" /> Menu Button </h2>
 
-#### `Description:` Menu Button - almost used on every website by now to view navbar menu on small screen devices. It should be simple yet impressively animated to give great UI/UX.
+`Description:` Menu Button - almost used on every website by now to view navbar menu on small screen devices. It should be simple yet impressively animated to give great UI/UX.
 
 <table>
   
@@ -34,7 +34,7 @@
 
 <h2><img align="center" width="21.5" src="images/bullet.png" /> Loader </h2>
 
-#### `Description:` Loader - The best way to engage a user when an application is loading. Nowadays almost every web or mobile application uses different styles of loaders.
+ `Description:` Loader - The best way to engage a user when an application is loading. Nowadays almost every web or mobile application uses different styles of loaders.
 <table>
   <tr align="center">
     <td>
@@ -57,7 +57,7 @@
 <h2><img align="center" width="21.5" src="images/bullet.png" /> Chart </h2>
 
 
-#### `Description:` Chart - Statistics numbers properly crafted in a chart with different colors not only easily comprehended by anyone but also present an aesthetic view to data science. 
+ `Description:` Chart - Statistics numbers properly crafted in a chart with different colors not only easily comprehended by anyone but also present an aesthetic view to data science. 
 <table>
   <tr align="center">
     <td>
