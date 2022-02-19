@@ -1,4 +1,4 @@
-# CSS Nifty Challenges
+<h1><img align="center" width="50" src="images/css3.png" /> CSS Nifty Challenges </h1>
 
 #### Nifty challenges are for practicing and testing CSS learning. It also helps in sharping and adding more values to the frontend styling skillset.
 
